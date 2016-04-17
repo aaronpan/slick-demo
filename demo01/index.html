@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="../src/js/jquery-1.12.3.min.js"></script>
+    <link rel="stylesheet" href="../src/css/slick/slick.css">
+    <link rel="stylesheet" href="../src/css/slick/slick-theme.css">
+  </head>
+
+  <body>
+    <div style="text-align: center; margin: 0px 30px;">
+      <div class="slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 3}'>
+        <div>
+          <img src="../src/images/photo.jpeg" />
+          <span class="title">Picture1</span>
+        </div>
+
+        <div>
+          <img src="../src/images/photo.jpeg" />
+          <span class="title">Picture2</span>
+        </div>
+
+        <div>
+          <img src="../src/images/photo.jpeg" />
+          <span class="title">Picture3</span>
+        </div>
+
+        <div>
+          <img src="../src/images/photo.jpeg" />
+          <span class="title">Picture4</span>
+        </div>
+
+        <div>
+          <img src="../src/images/photo.jpeg" />
+          <span class="title">Picture5</span>
+        </div>
+
+        <div>
+          <img src="../src/images/photo.jpeg" />
+          <span class="title">Picture6</span>
+        </div>
+
+        <div>
+          <img src="../src/images/photo.jpeg" />
+          <span class="title">Picture7</span>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../src/js/slick.min.js"></script>
+
+    <style type="text/css">
+      .slider img {
+        padding: 10px;
+        margin: auto;
+      }
+
+      .slick-prev:before {
+        content: "<";
+        color: black;
+        font-size: 30px;
+      }
+
+      .slick-next:before {
+        content: ">";
+        color: black;
+        font-size: 30px;
+      }
+    </style>
+
+    <script type="text/javascript">
+      $(function(){
+        $(".slider").slick({
+          dots: false,       // remove the points below the images
+          infinite: false,
+          speed: 300,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true
+              }
+            },
+            {
+              breakpoint: 600,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2
+              }
+            },
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
+        });
+      });
+    </script>
+  </body>
+</html>
